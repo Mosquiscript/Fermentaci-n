@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 5px;
-  text-align: left;
-}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Fermentacion</a>
+    <!-- <a href="#news">Fermentacion 1</a>
+    <a href="#contact">Fermentacion 2</a>
+    <a href="#about">Pulmones</a> -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
 <div>
   <label>Ultima actualizacion:</label>
   <label id="DivUltimaActualizacion">Cargando...</label>
 </div>
 
-<h2>Fermentacion 1</h2>
+<h3>Fermentacion 1</h3>
 <table  id="tabla">
   <th>
     Tina
@@ -32,7 +35,7 @@ th, td {
   </th>
 </table>
 
-<h2>Pulmones</h2>
+<h3>Pulmones</h3>
 <table  id="TablaPulmones">
   <th>
     Tina
@@ -45,7 +48,7 @@ th, td {
   </th>
 </table>
 
-<h2>Fermentacion 2</h2>
+<h3>Fermentacion 2</h3>
 <table  id="TablaFermentacion2">
   <th>
     Tina

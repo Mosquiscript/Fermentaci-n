@@ -123,6 +123,15 @@
     tablaRef.doc("FH").set({fechaHora: DivUltimaActualizacion.textContent});
   }
 
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
   CrearTabla(tablaFermentacion1, 25, "Fermentacion1");
   CrearTabla(tablaPulmones, 4, "Pulmones");
   CrearTabla(tablaFermentacion2, 13, "Fermentacion2");
