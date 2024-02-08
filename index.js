@@ -16,7 +16,7 @@
   const tablaFermentacion = document.getElementById("tabla");
   const tablaPulmones = document.getElementById("TablaPulmones");
   const arraySelectOpcionStatusTinas  = ["MF", "MM", "JF", "SUCIA", "LAVADA", "LAVADO", "COLAS", "CARGANDO COLAS", "CARGANDO", "CASI SE TERMINA", "LIBERADA"];
-  let enviarStatusObjecto = ["Tinas.    Status."];
+  let enviarStatusObjecto = [];
   
 
   function CrearTabla(tablaReferencia, cantidadTinas, tablaReferenciaNombre) {
