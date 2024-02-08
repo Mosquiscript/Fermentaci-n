@@ -144,8 +144,10 @@
     let volumen;
     if(index <= 25){
       volumen = (610 - vacio.value) * 116.41 + 2250;
+      alert(index);
     }else{
       volumen = (610 - vacio.value) * 115 + 2230;
+      alert(index);
     }
     let volumenDiv = document.getElementById(`DivVolumenFermentacion${index}`);
     volumenDiv.innerHTML = volumen.toFixed(2);
