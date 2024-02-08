@@ -127,12 +127,12 @@
     
   }
 
-  function ActualizarDatosTinasFireBase(tablaReferencia, numeroTinaActualizado, vacioActualizado, volumenActualizado, statusActualizado, RAActualizado, LoteActualizado, TinaDestActualizado) {
+  function ActualizarDatosTinasFireBase(tablaReferencia, numeroTinaActualizado, vacioActualizado, volumenActualizado, statusActualizado, RAActualizado, LoteActualizado, tinaDestActualizado) {
 
     if (tablaReferencia == "Pulmones") {
       let tablaRefPulmones = db.collection("Pulmones");
         ActualizarStatusArray(numeroTinaActualizado, "Pulmones", tinaDestActualizado, LoteActualizado, statusActualizado);
-        tablaRefPulmones.doc(`${numeroTinaActualizado}`).set({vacio: vacioActualizado, volumen: volumenActualizado, numeroTina: numeroTinaActualizado, status: statusActualizado, RA: RAActualizado, Lote: LoteActualizado, TinaDestilando:  TinaDestActualizado});
+        tablaRefPulmones.doc(`${numeroTinaActualizado}`).set({vacio: vacioActualizado, volumen: volumenActualizado, numeroTina: numeroTinaActualizado, status: statusActualizado, RA: RAActualizado, Lote: LoteActualizado, TinaDestilando:  tinaDestActualizado});
     } else {
       let tablaRefFermentacion = db.collection("Fermentacion");
         ActualizarStatusArray(numeroTinaActualizado, "Fermentacion", tinaDestActualizado, LoteActualizado, statusActualizado);
