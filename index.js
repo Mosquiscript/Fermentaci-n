@@ -143,7 +143,7 @@
     let selectStatus = document.getElementById(`SelectStatusFermentacion${index}`);
     let volumen;
     if(index <= 25){
-      volumen = (610 - vacio.value) * 116.41 + 2250;
+      volumen = (610 - vacio.value) * 116.41 + 2250.7;
       
     }else{
       volumen = (610 - vacio.value) * 115.81 + 1853;
