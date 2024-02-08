@@ -131,9 +131,11 @@
 
     if (tablaReferencia == "Pulmones") {
       let tablaRefPulmones = db.collection("Pulmones");
+        ActualizarStatusArray(numeroTinaActualizado, "Pulmones", tinaDestActualizado, LoteActualizado, statusActualizado);
         tablaRefPulmones.doc(`${numeroTinaActualizado}`).set({vacio: vacioActualizado, volumen: volumenActualizado, numeroTina: numeroTinaActualizado, status: statusActualizado, RA: RAActualizado, Lote: LoteActualizado, TinaDestilando:  TinaDestActualizado});
     } else {
       let tablaRefFermentacion = db.collection("Fermentacion");
+        ActualizarStatusArray(numeroTinaActualizado, "Fermentacion", tinaDestActualizado, LoteActualizado, statusActualizado);
         tablaRefFermentacion.doc(`${numeroTinaActualizado}`).set({vacio: vacioActualizado, volumen: volumenActualizado, numeroTina: numeroTinaActualizado, status: statusActualizado});
     }  
   }
@@ -200,6 +202,33 @@
     let tablaRef = db.collection("UltimaActualizacion");
     tablaRef.doc("FH").set({fechaHora: DivUltimaActualizacion.textContent});
   }
+
+function ActualizarStatusArray(numeroTina, tipoTina, tinaDestilando, lote, status){
+  if(tipoTina == "Fermentacion"){
+    
+    enviarStatusObjecto[numeroTina] = `${numeroTina}  ${statusTina}`;
+  
+  }else{
+     let numeroPulmon;
+switch (numeroTina) {
+  case 1:
+    numeroPulmon = 37;
+    break;
+  case 2:
+    numeroPulmon = 38;
+    break;
+  case 3:
+    numeroPulmon = 39;
+    break;
+  default:
+    console.log(`no se encontro el index del pulmón`);
+}
+
+    enviarStatusObjecto[numeroPulmon] = `${numeroPulmon} - ${tinaDestilando}- L${lote} - ${status}`);
+  }
+    
+  
+}
 
   const shareData = {
     text: enviarStatusObjecto
