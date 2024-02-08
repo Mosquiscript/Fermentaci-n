@@ -203,7 +203,7 @@
     tablaRef.doc("FH").set({fechaHora: DivUltimaActualizacion.textContent});
   }
 
-function ActualizarStatusArray(numeroTina, tipoTina, tinaDestilando, lote, status){
+function ActualizarStatusArray(numeroTina, tipoTina, tinaDestilando, lote, statusTina){
   if(tipoTina == "Fermentacion"){
     
     enviarStatusObjecto[numeroTina] = `${numeroTina}  ${statusTina}`;
@@ -224,7 +224,7 @@ switch (numeroTina) {
     console.log(`no se encontro el index del pulmón`);
 }
 
-    enviarStatusObjecto[numeroPulmon] = `${numeroPulmon} - ${tinaDestilando}- L${lote} - ${status}`;
+    enviarStatusObjecto[numeroPulmon] = `${numeroPulmon} - ${tinaDestilando}- L${lote} - ${statusTina}`;
   }
     
   
