@@ -224,7 +224,7 @@ switch (numeroTina) {
     console.log(`no se encontro el index del pulmón`);
 }
 
-    enviarStatusObjecto[numeroPulmon] = `${numeroPulmon} - ${tinaDestilando}- L${lote} - ${status}`);
+    enviarStatusObjecto[numeroPulmon] = `${numeroPulmon} - ${tinaDestilando}- L${lote} - ${status}`;
   }
     
   
