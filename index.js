@@ -141,7 +141,12 @@
   function CalcularVolumenTinasFermentacion(index) {
     let vacio = document.getElementById(`InputVacioFermentacion${index}`);
     let selectStatus = document.getElementById(`SelectStatusFermentacion${index}`);
-    let volumen = (610 - vacio.value) * 116.41 + 2250;
+    let volumen;
+    if(index <= 25){
+      volumen = (610 - vacio.value) * 116.41 + 2250;
+    }else{
+      volumen = (610 - vacio.value) * 115 + 2230;
+    }
     let volumenDiv = document.getElementById(`DivVolumenFermentacion${index}`);
     volumenDiv.innerHTML = volumen.toFixed(2);
     ActualizarDatosTinasFireBase("Fermentacion", index, vacio.value, volumen, selectStatus.value);
