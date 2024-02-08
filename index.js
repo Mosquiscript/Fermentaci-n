@@ -88,7 +88,7 @@
   }
 
   function SolicitarDatosFireBase() {
-    db.collection("Fermentacion").get().orderBy("numeroTina").then((querySnapshot) => {
+    db.collection("Fermentacion").orderBy("numeroTina").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
           /* console.log(doc.id, " => ", doc.data()); */
